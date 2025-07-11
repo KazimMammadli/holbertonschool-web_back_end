@@ -4,6 +4,4 @@
 
 def insert_school(mongo_collection, **kwargs):
     """Return ids"""
-    mongo_collection.insert_one(kwargs)
-    return mongo_collection.find({},{"_id": True})
-  
+    return mongo_collection.insert_one(kwargs).inserted_id
