@@ -20,7 +20,7 @@ if __name__ == "__main__":
     print(f"{check} status check")
     pipeline = [
         {"$group": {
-                "ip": "$ip",
+                "_id": "$ip",
                 "count": {"$sum": 1}}
         },
 
