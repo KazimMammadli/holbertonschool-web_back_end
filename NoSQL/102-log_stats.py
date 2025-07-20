@@ -32,4 +32,4 @@ if __name__ == "__main__":
     result = list(collection.aggregate(pipeline))
     print(f"IPs:")
     for i in range(len(result)):
-        print(f"\t{result[i]['ip']}: {result[i]['count']}")
+        print(f"\t{result[i]['_id']}: {result[i]['count']}")
